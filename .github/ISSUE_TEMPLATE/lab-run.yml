@@ -1,0 +1,34 @@
+name: Lab run
+description: Start a lab from the ladder — gives your run a durable record and a place for questions.
+title: "Lab NN: <lab name> — <your handle>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pick your rung from the [lab ladder](https://github.com/lentago/asclepias/blob/main/labs/README.md),
+        set the title (e.g. `Lab 01: First PR — @octocat`), and go. Post questions here as you work —
+        stuck ≠ failed, and confusion reports improve the manual.
+  - type: dropdown
+    id: lab
+    attributes:
+      label: Which lab?
+      options:
+        - "00 — Ask the fleet (L0)"
+        - "01 — First PR: the roster (L1)"
+        - "02 — Move a real dashboard (L2)"
+        - "03 — Review an agent (L3)"
+        - "04 — Game day (L4, scheduled)"
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Your plan (optional)
+      description: For labs with choices (which repo to ask, which dashboard to touch) — say what you're aiming at.
+  - type: checkboxes
+    id: prereqs
+    attributes:
+      label: Before you start
+      options:
+        - label: I've read the [day-one path](https://github.com/lentago/asclepias/blob/main/onboarding/day-one.md)
+          required: false
