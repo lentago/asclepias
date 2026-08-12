@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Day-one onboarding path
+    url: https://github.com/lentago/asclepias/blob/main/onboarding/day-one.md
+    about: New to the lab? Start here — everything works from a browser.
+  - name: Lentago Labs org profile
+    url: https://github.com/lentago
+    about: What this place is, and the map of which merge moves which live surface.
