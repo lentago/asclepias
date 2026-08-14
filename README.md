@@ -82,6 +82,7 @@ not by invention.
 | [`manual/`](manual/) | The operations manual: estate atlas, pattern catalog, glossary, runbook index |
 | [`labs/`](labs/) | Numbered hands-on exercises, L0 → L4 |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | The lab-run issue form |
+| [`docs/adr/`](docs/adr/) | Architecture decisions — why this repo is shaped the way it is |
 
 ---
 
