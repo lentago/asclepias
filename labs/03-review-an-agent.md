@@ -1,10 +1,10 @@
 # Lab 03 — Review an agent
 
 **Level:** L3 · agentic
-**Goal:** review AI-produced work with the same rigor you'd give a colleague's
-PR. In this fleet, agents open PRs constantly and **never merge** — the human
-review is the load-bearing control, so reviewing agent output well is a
-first-class operator skill.
+**Goal:** give AI-produced work the same review you'd give a colleague's PR.
+In this fleet, agents open PRs constantly and **never merge** — the human
+review is the load-bearing control, which makes it some of the most
+consequential reading anyone does here.
 **Access needed:** org membership (the `Players` team makes you assignable as
 a reviewer; commenting works for anyone).
 
@@ -31,6 +31,6 @@ a reviewer; commenting works for anyone).
 
 A link to your review comment.
 
-**What you just practiced:** the trust model that makes agentic operations
-safe — autonomy on the work, humans on the merge, and reviewers who read the
-diff instead of the vibes.
+**What just happened:** that's the trust model that makes agentic operations
+safe, in action — autonomy on the work, humans on the merge, and reviewers who
+read the diff instead of the vibes.

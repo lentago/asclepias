@@ -25,4 +25,4 @@ citation.
 | **Tiered automation trust** | Automation isn't all-or-nothing: auto-merge the provably-safe class, hold everything else for a human with an explanatory comment. | [music-curator `follow-fold.yml`](https://github.com/lentago/music-curator/blob/main/.github/workflows/follow-fold.yml): safe reservoir seeds auto-merge; discards and unfollows are held with a bot explanation. |
 
 **Missing a row?** If a fleet README demonstrates something this catalog
-doesn't teach, add it — with the evidence link — via PR.
+doesn't cover yet, add it — with the evidence link — via PR.

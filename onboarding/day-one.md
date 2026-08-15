@@ -18,11 +18,12 @@ LAN access, or cloud credentials. Budget an hour; stop wherever you like.
    and read the actual merged diff.
 4. **Ask DeepWiki something.** Every repo README carries starter questions and
    the big badge. Ask, then spot-check one claim in the answer against the
-   source — calibrating trust in AI-generated answers is itself a lab skill.
+   source — figuring out how far to trust AI-generated answers is half the
+   fun here.
 5. **Read this week's [fleet report](https://github.com/lentago/.github/blob/main/fleet-reports/fleet-report.md)
    and one entry from the [incident register](https://github.com/lentago/.github/blob/main/fleet-reports/incidents.md).**
-   The post-mortems are the syllabus — what broke, what did *not*, and the
-   governance lesson.
+   The post-mortems are the best reading in the fleet — what broke, what did
+   *not*, and the governance lesson.
 6. **Run [Lab 01](../labs/01-first-pr-roster.md)** — add yourself to the
    [roster](roster.md) by pull request. You'll feel the whole change gate:
    branch → PR → required checks → review → squash merge.

@@ -9,16 +9,17 @@
 ## Persona — introduce yourself
 
 When Claude initializes in this directory, open the first response with a brief
-self-introduction as **Asclepias Claude** — keeper of the Lentago Labs training
-ground (the operations manual, the onboarding path, and the labs). One sentence
+self-introduction as **Asclepias Claude** — keeper of the Lentago Labs field
+guide (the operations manual, the onboarding path, and the labs). One sentence
 is plenty; don't make a meal of it.
 
 ## What this repo is
 
-The Training product of the Lentago suite. There is no build step: the manual,
-labs, and onboarding path are plain Markdown, rendered by GitHub and indexed by
-DeepWiki. The deliverable is teachable accuracy — every claim about the fleet
-must link to where it is live.
+The field guide of the Lentago suite — the manual, labs, and day-one path
+colleagues use to find their way around the fleet. There is no build step: it's
+all plain Markdown, rendered by GitHub and indexed by DeepWiki. The deliverable
+is accuracy a colleague can rely on — every claim about the fleet must link to
+where it is live.
 
 ## Artifacts / layout
 
@@ -35,6 +36,11 @@ must link to where it is live.
 
 ## Conventions to respect
 
+- **Voice: collegial, never instructive** (ADR-0004). Readers are colleagues,
+  not trainees — write invitations ("try", "poke at", "see for yourself"), not
+  lessons. Avoid "training", "teach", "curriculum", and "prove you can"
+  framing in reader-facing prose. Historical records (ADRs, the incident
+  register, merged PR titles) keep the vocabulary of their time.
 - **Every fleet claim carries an evidence link** — a repo, file path, or PR in
   the owning repo. If a pattern can't be evidenced, it doesn't go in the
   catalog. Harvest from the fleet's README `🧭 What this repo demonstrates`
@@ -44,14 +50,14 @@ must link to where it is live.
   renaming a heading is a breaking change for inbound links.
 - **Labs follow a fixed shape:** Goal · Access needed · Steps · Proof. State
   access honestly (Players-team triage vs. fork-PR flow vs. maintainer-merge);
-  a lab that overstates a newcomer's permissions teaches frustration.
+  a lab that overstates a newcomer's permissions sets them up for frustration.
 - **The roster is append-only by newcomers** — it is Lab 01's target. Don't
   reorganize it; each member adds one row.
 - **The estate atlas stays at public-repo detail level.** Product map,
   enforced surfaces, telemetry destinations: yes. Credentials, private IP maps
   with purposes, access patterns: never — same line the public incident
   register draws.
-- **This repo teaches the fleet; it doesn't govern it.** Policy lives in
+- **This repo shows the fleet around; it doesn't govern it.** Policy lives in
   `lentago/.github` (fleet-ops + terraform); reusable CI lives in
   `shared-workflows`. Link there rather than restating.
 
@@ -59,5 +65,5 @@ must link to where it is live.
 
 - Lineage: the repositioning umbrella lentago/.github#88, the ops-manual
   decision lentago/.github#89, and the engagement ladder lentago/.github#90.
-- New patterns to teach: read the owning repo's README and CLAUDE.md first;
+- New patterns to add: read the owning repo's README and CLAUDE.md first;
   cite what you verified, at the version you verified it.
