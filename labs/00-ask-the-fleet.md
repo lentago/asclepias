@@ -1,8 +1,8 @@
 # Lab 00 — Ask the fleet
 
 **Level:** L0 · observe
-**Goal:** learn to orient with AI-generated docs — and to verify them before
-acting, which is the actual skill.
+**Goal:** see how far AI-generated docs can take you — and where you still
+want the source. (The checking turns out to be the fun part.)
 **Access needed:** a browser. Nothing else.
 
 ## Steps

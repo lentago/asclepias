@@ -13,3 +13,4 @@ from what is assessed only in hindsight. Treat these as a faithful record of
 | [0001](0001-dedicated-training-repo.md) | A dedicated public Training repo, codenamed `asclepias` |
 | [0002](0002-plain-markdown-zero-cost.md) | Plain public Markdown, engineered for LLM consumption at zero cost |
 | [0003](0003-curriculum-as-issues.md) | Curriculum-as-issues, with honesty rules as content policy |
+| [0004](0004-collegial-voice.md) | Collegial voice — a field guide, not a training ground (written at decision time, not reconstructed) |

@@ -31,6 +31,6 @@ apply is CI's job, not yours.
 The merged PR link + the apply workflow-run link (and the before/after of your
 panel, if you can capture it).
 
-**What you just practiced:** proposing a production change you cannot apply
-yourself, reviewed as a diff, applied by automation, with git as the single
-source of truth.
+**What just happened:** you proposed a production change you couldn't apply
+yourself; it was reviewed as a diff, applied by automation, and git stayed the
+single source of truth.

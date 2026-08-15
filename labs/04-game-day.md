@@ -20,7 +20,7 @@ into a full lab.
 
 ## Why this is the top rung
 
-Everything below it is practice for this: you'll propose the change, read the
+Everything below it builds toward this: you'll propose the change, read the
 telemetry, review the fixes (some agent-authored), and produce the public
 artifact. When you've run a game day end to end, you're not observing the
 lab's patterns anymore — you're operating them.

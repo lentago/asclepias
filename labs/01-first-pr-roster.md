@@ -26,6 +26,6 @@ fork works identically.
 The merged PR link, and your name rendering in
 [`onboarding/roster.md`](../onboarding/roster.md) on `main`.
 
-**Bonus rep:** open a second PR filling in your `First merge` cell with the
-first PR's number. Small PRs that finish the paperwork are a habit worth
-building.
+**Bonus:** open a second PR filling in your `First merge` cell with the
+first PR's number. Small PRs that finish the paperwork are always welcome
+here.
