@@ -49,8 +49,12 @@ where it is live.
   consume pages in isolation — no page may depend on reading another first, and
   renaming a heading is a breaking change for inbound links.
 - **Labs follow a fixed shape:** Goal · Access needed · Steps · Proof. State
-  access honestly (Players-team triage vs. fork-PR flow vs. maintainer-merge);
-  a lab that overstates a newcomer's permissions sets them up for frustration.
+  access honestly (org-wide write vs. maintainer-merge); a lab that overstates
+  a newcomer's permissions sets them up for frustration. Every member holds
+  **write** on every repo in the fleet — no team, nothing to request — but
+  write does not confer merge: `main` on every public repo opens only through
+  the maintainer named in the branch-protection push allowlist
+  (`lentago/.github`'s `terraform/protection.tf`).
 - **The roster is append-only by newcomers** — it is Lab 01's target. Don't
   reorganize it; each member adds one row.
 - **The estate atlas stays at public-repo detail level.** Product map,

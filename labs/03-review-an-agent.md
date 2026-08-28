@@ -5,8 +5,8 @@
 In this fleet, agents open PRs constantly and **never merge** — the human
 review is the load-bearing control, which makes it some of the most
 consequential reading anyone does here.
-**Access needed:** org membership (the `Players` team makes you assignable as
-a reviewer; commenting works for anyone).
+**Access needed:** org membership — that alone gives you write, which is what
+makes you assignable as a reviewer; commenting works for anyone.
 
 ## Steps
 

@@ -3,9 +3,11 @@
 Welcome to the lab. Everything below works from a browser — nothing needs VPN,
 LAN access, or cloud credentials. Budget an hour; stop wherever you like.
 
-1. **Accept the org invite.** It adds you to the `Players` team automatically —
-   that grants triage on the product repos (assignable to reviews, can manage
-   issues) and everything you need for the labs.
+1. **Accept the org invite.** That alone gives you **write** on every repo in
+   the fleet — there's no team to join and nothing else to request, and it's
+   everything you need for the labs. Write isn't merge, though: on every
+   public repo `main` opens only through a maintainer's review (you'll feel
+   that gate directly in [Lab 01](../labs/01-first-pr-roster.md)).
 2. **Read the front door.** The [org profile](https://github.com/lentago)
    says what this place is, and its *"Every merge changes something real"*
    table is the fastest mental model of the fleet.
