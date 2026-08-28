@@ -1,6 +1,7 @@
 # ADR-0003: Curriculum-as-issues, with honesty rules as content policy
 
-**Status:** Accepted (2026-08-12; reconstructed 2026-08-13)
+**Status:** Accepted (2026-08-12; reconstructed 2026-08-13; amended 2026-08-28 —
+see [Amendment (2026-08-28)](#amendment-2026-08-28))
 
 ## Context
 
@@ -52,3 +53,30 @@ fleet's verified evidence, never invented.
   landing) so the stated access in each lab stays honest.
 - The pattern catalog and glossary inherit the same evidence discipline: a
   row with no link to a live fleet artifact does not get added.
+
+## Amendment (2026-08-28)
+
+**The re-audit trigger named above fired, and the labs held to the honesty
+rule.** On 2026-08-27 the org base repository permission moved `none` →
+`write`, so every member now holds write on every repo in the fleet,
+including `lupinus`, `monarda`, and `osmunda`, which the `Players` team never
+covered. `Players` — which had carried `triage` on fifteen repos — was
+retired the next day (2026-08-28) as strictly redundant beneath the new base
+grant. No member lost access.
+
+This is exactly the "e.g. a `players` team landing" case the Consequences
+section anticipated, arriving as a retirement rather than a landing. The
+audit it triggered (asclepias#8) found: `onboarding/day-one.md`,
+`labs/README.md`, `labs/03-review-an-agent.md`, and this repo's `CLAUDE.md`
+described access through the `Players` team and were corrected to describe
+org-wide write instead. Two points the correction had to hold onto: write is
+not merge — the push allowlist in `lentago/.github`'s `terraform/protection.tf`
+still names only the maintainer, unchanged by the base-permission move — and
+a lab's fork-PR flow is only a workaround worth removing where it was taught
+as a *necessity* under triage's limits, not where forking is proposed for
+other reasons (Lab 02's fork PR into an externally-owned repo, for instance,
+was never stated as mandatory and was left as-is).
+
+The honesty rule itself is unchanged by this amendment: state access
+plainly, keep write and merge distinct, and re-audit again the next time the
+org's access model moves.
