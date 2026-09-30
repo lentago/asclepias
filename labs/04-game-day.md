@@ -47,5 +47,4 @@ purpose, on a schedule, to find out whether your backups restore and your
 alerts fire *before* a real failure asks the same question. The write-up
 afterward is what turns one scare into something the whole team learns from.
 
-*Interested? Say so on lentago/.github#90 (the engagement-pathways issue) or
-open a lab-run issue here.*
+*Interested? Open a lab-run issue here and say so — that's the whole sign-up.*

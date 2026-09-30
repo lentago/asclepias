@@ -53,7 +53,7 @@ This repo runs on the same patterns it catalogs — starting with how it was bor
 | **Docs-as-code** — the manual is versioned, reviewed, link-checked | Every page is plain Markdown under [`manual/`](manual/); [`docs-check`](.github/workflows/docs-check.yml) (a thin wrapper over the shared reusable workflow) gates every PR, so a broken link can't merge. |
 | **Lab runs as issues** — every lab run is a tracked artifact | Labs live in [`labs/`](labs/) with an [issue template](.github/ISSUE_TEMPLATE/lab-run.yml); opening a lab issue gives each run a durable record, review thread, and finish line. |
 | **Claims carry evidence** — no pattern without a link to where it's live | The [pattern catalog](manual/pattern-catalog.md) cites the owning repo and file/PR for every row — the same evidence discipline every fleet README follows. |
-| **LLM-consumable by design** — one manual, many readers | Pages are self-contained with stable headings, so DeepWiki, an agent with a checkout, or a colleague with a browser all get the same answers. |
+| **LLM-consumable by design** — one manual, many readers | Pages are self-contained with stable headings, so DeepWiki, an agent with a checkout, or anyone with a browser all get the same answers. |
 
 ## 🛠️ Make a change yourself
 

@@ -22,7 +22,7 @@ fastest way to understand what you're about to set up at home.
 
 ## Steps
 
-1. Branch (or fork) this repo and edit
+1. Fork this repo and edit
    [`onboarding/roster.md`](../onboarding/roster.md): **append one row** with
    your name, GitHub handle, and join month. Don't touch other rows.
 2. Commit with a message you'd want to read in a year, and open a PR. Write
