@@ -1,12 +1,12 @@
-# Roster
+# Guestbook
 
-Members of the lab, in order of arrival. Adding your row **by pull request** is
-[Lab 01](../labs/01-first-pr-roster.md) — your first trip through the change
-gate.
+People who have run Lab 01, in order of arrival. Signing it — adding your own
+row **by pull request** — *is* [Lab 01](../labs/01-first-pr-roster.md): your
+first trip through the change gate.
 
-Append one row; don't edit others. `First merge` is the PR that landed your
-row (fill it in after it merges — or in a follow-up PR; nobody minds a second
-small one).
+Append one row; don't edit anyone else's. `First merge` is the PR that landed
+your row — fill it in once it merges, or in a quick follow-up PR later. Nobody
+minds a second small one.
 
 | Name | GitHub | Joined | First merge |
 |---|---|---|---|

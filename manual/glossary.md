@@ -1,9 +1,11 @@
-# Glossary — enterprise term ↔ lab practice
+# Glossary — enterprise term ↔ how we do it here (and how you can too)
 
-The lab runs the same disciplines enterprise IT runs; it just implements them
-with lighter machinery. This table is the translation layer.
+You already know these disciplines by their enterprise names. We run the same
+ones — just with lighter machinery you can actually afford and maintain. This
+table is the translation layer, and the right-hand column is a decent shopping
+list for your own org.
 
-| Enterprise term | How the lab practices it | Where |
+| Enterprise term | How we do it here | Where |
 |---|---|---|
 | Change management / CAB | Pull request + required status checks + human review; nothing reaches `main` without passing the gate | Branch rulesets fleet-wide ([fleet-ops](https://github.com/lentago/.github/tree/main/fleet-ops)) |
 | Change record | The squash-merged PR — title, body, diff, checks, and reviewer in one durable artifact | Every repo; the PR body becomes the squash commit message |

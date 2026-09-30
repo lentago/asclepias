@@ -14,3 +14,4 @@ from what is assessed only in hindsight. Treat these as a faithful record of
 | [0002](0002-plain-markdown-zero-cost.md) | Plain public Markdown, engineered for LLM consumption at zero cost |
 | [0003](0003-curriculum-as-issues.md) | Curriculum-as-issues, with honesty rules as content policy |
 | [0004](0004-collegial-voice.md) | Collegial voice — a field guide, not a training ground (written at decision time, not reconstructed) |
+| [0005](0005-one-reader-one-voice.md) | One reader, one voice — vol. 1 of the guide; supersedes ADR-0004's audience premise, keeps its mechanics |

@@ -10,10 +10,14 @@
 
 **Asclepias** (milkweed — the botanical codename line alongside `lentago`,
 `solidago`, `kalmia`, `drosera`, `claytonia`, `betula`, `brasenia`, and
-`myosotis`) is the Lentago Labs **field guide**: the shared operations manual,
-a day-one path, and numbered hands-on labs. Milkweed is the host plant — the
-one every monarch finds its way to. This repo plays that role here: it's where
-you land, look around, and try something against a real fleet.
+`myosotis`) is **vol. 1 of the Lentago Labs guide**: how our own estate works,
+with hands-on labs you can run against it before you build the same thing in
+your own org. It's the operations manual, a day-one path, and numbered labs —
+all free to take, and you don't need an account with us to read or run any of
+it. [lupinus](https://github.com/lentago/lupinus) is vol. 2: make it yours.
+Milkweed is the host plant — the one every monarch finds its way to. This repo
+plays that role: it's where you land, look around, and try something against a
+real fleet before it's yours to keep.
 
 **Authorship:** The manual, labs, and documentation in this repo are co-written
 with [Claude](https://claude.ai) (Anthropic). I direct the work and review the
@@ -37,7 +41,7 @@ engineer — please don't read this repo as a portfolio of coding ability.
 - What order do the labs run in, and what's each one about?
 - Where in the fleet is apply-on-merge actually enforced, according to the
   pattern catalog?
-- What does the glossary say "change management" maps to in this lab?
+- What does the glossary say "change management" maps to here?
 
 ## 🧭 What this repo demonstrates
 
@@ -49,44 +53,51 @@ This repo runs on the same patterns it catalogs — starting with how it was bor
 | **Docs-as-code** — the manual is versioned, reviewed, link-checked | Every page is plain Markdown under [`manual/`](manual/); [`docs-check`](.github/workflows/docs-check.yml) (a thin wrapper over the shared reusable workflow) gates every PR, so a broken link can't merge. |
 | **Lab runs as issues** — every lab run is a tracked artifact | Labs live in [`labs/`](labs/) with an [issue template](.github/ISSUE_TEMPLATE/lab-run.yml); opening a lab issue gives each run a durable record, review thread, and finish line. |
 | **Claims carry evidence** — no pattern without a link to where it's live | The [pattern catalog](manual/pattern-catalog.md) cites the owning repo and file/PR for every row — the same evidence discipline every fleet README follows. |
-| **LLM-consumable by design** — one manual, many readers | Pages are self-contained with stable headings, so DeepWiki, an agent with a checkout, or a colleague with a browser all get the same answers. |
+| **LLM-consumable by design** — one manual, many readers | Pages are self-contained with stable headings, so DeepWiki, an agent with a checkout, or anyone with a browser all get the same answers. |
 
 ## 🛠️ Make a change yourself
 
-This is a lab — the systems are real, the stakes are not. Pick whatever
-sounds fun:
+These systems are real, and nothing critical rides on them. That makes this a
+safe place to try a change before you make the same kind of change in your own
+shop. Pick one:
 
 **Run a lab.**
-Open a [lab-run issue](https://github.com/lentago/asclepias/issues/new/choose), pick your rung from the
-[ladder](labs/README.md), and work it. Lab 01 ends with your name merged into
-the [roster](onboarding/roster.md) — your first PR through the fleet's change
-gate.
+Open a [lab-run issue](https://github.com/lentago/asclepias/issues/new/choose),
+pick your rung from the [ladder](labs/README.md), and work it. Lab 01 ends with
+your name merged into the [guestbook](onboarding/roster.md) — your first pull
+request (a proposed change someone reviews before it lands) through the fleet's
+change gate. You'll need a free GitHub account and a fork; that's it.
 
 **Add or sharpen a lab.**
 Edit or add a numbered exercise under [`labs/`](labs/) and open a PR. The
-required `docs-check` must pass; a maintainer reviews and merges. Labs follow a
-fixed shape (goal, access needed, steps, proof) — see
+required `docs-check` — which confirms every relative link in the repo still
+resolves — has to pass; a maintainer reviews and merges. Labs follow a fixed
+shape (goal, access needed, steps, proof) — see
 [`labs/README.md`](labs/README.md).
 
 **Extend the manual.**
 Spot a pattern in the fleet the [catalog](manual/pattern-catalog.md) doesn't
 cover yet, or an enterprise term the [glossary](manual/glossary.md) doesn't map?
-Add a row with an evidence link and open a PR. The manual grows by harvest,
-not by invention.
+Add a row with an evidence link and open a PR. The manual grows by harvest, not
+by invention — every row points at where the pattern is already live.
 
 ## What's here
 
+Everything is plain Markdown — read it in the browser, or clone it and read it
+offline. Nothing to build, nothing to install.
+
 | Path | Purpose |
 |---|---|
-| [`onboarding/`](onboarding/) | The day-one path and the member roster |
+| [`onboarding/`](onboarding/) | The day-one path and the guestbook |
 | [`manual/`](manual/) | The operations manual: estate atlas, pattern catalog, glossary, runbook index |
-| [`labs/`](labs/) | Numbered hands-on exercises, L0 → L4 |
+| [`labs/`](labs/) | Numbered hands-on labs, L0 → L4 |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | The lab-run issue form |
 | [`docs/adr/`](docs/adr/) | Architecture decisions — why this repo is shaped the way it is |
 
 ---
 
-> 🌱 **Lentago Labs** is a team learning lab — real systems, non-critical
-> stakes, modern operations patterns demonstrated in the open. Start at the
-> [org profile](https://github.com/lentago), and read this repo on
-> [DeepWiki](https://deepwiki.com/lentago/asclepias).
+> 🌱 **Lentago Labs** is a pro-bono operations practice for organizations that
+> run on volunteers, donations, and one overworked tech person. Everything here
+> is free to take, and we practice what we publish: our own estate runs this
+> way, in the open. Start at the [org profile](https://github.com/lentago), and
+> read this repo on [DeepWiki](https://deepwiki.com/lentago/asclepias).

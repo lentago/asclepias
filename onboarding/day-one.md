@@ -1,41 +1,61 @@
 # Day one
 
-Welcome to the lab. Everything below works from a browser — nothing needs VPN,
-LAN access, or cloud credentials. Budget an hour; stop wherever you like.
+**What you're about to do:** take one guided lap around a real, working
+estate — the org's front door, one product repo, the AI-generated wiki, this
+week's public report — and then make your own first change to it.
 
-1. **Accept the org invite.** That alone gives you **write** on every repo in
-   the fleet — there's no team to join and nothing else to request, and it's
-   everything you need for the labs. Write isn't merge, though: on every
-   public repo `main` opens only through a maintainer's review (you'll feel
-   that gate directly in [Lab 01](../labs/01-first-pr-roster.md)).
+**Why bother:** this fleet runs the way you'll probably want your own org to
+run one day — every change reviewed, every change recorded, nothing edited live
+by hand at 9 pm. The fastest way to decide whether that's worth building is to
+walk through one that already works. Nothing here is yours to break, so poke at
+all of it.
+
+**Time:** about an hour. Stop wherever you like; it keeps.
+
+Everything below works from a browser. Nothing needs a VPN, LAN access, or
+cloud credentials.
+
+1. **Get a free GitHub account, and that's it.** There's no invite to accept
+   and no org to join — you'll do everything from your own account and, when
+   you're ready to change something, your own *fork* (your personal copy of a
+   repo on GitHub). If you already have an account, you're done with step one.
 2. **Read the front door.** The [org profile](https://github.com/lentago)
    says what this place is, and its *"Every merge changes something real"*
    table is the fastest mental model of the fleet.
 3. **Pick one product repo** — [solidago](https://github.com/lentago/solidago)
    (AWS platform), [drosera](https://github.com/lentago/drosera)
-   (observability), [kalmia](https://github.com/lentago/kalmia)
-   (provisioning), [claytonia](https://github.com/lentago/claytonia) (agent
-   fleet), or [betula](https://github.com/lentago/betula) (log capture) — and
-   read its **🛠️ Make a change yourself** section. Follow one proof-PR link
-   and read the actual merged diff.
-4. **Ask DeepWiki something.** Every repo README carries starter questions and
-   the big badge. Ask, then spot-check one claim in the answer against the
-   source — figuring out how far to trust AI-generated answers is half the
-   fun here.
+   (observability — the dashboards and alerts that watch everything),
+   [kalmia](https://github.com/lentago/kalmia) (provisioning),
+   [claytonia](https://github.com/lentago/claytonia) (the agent fleet), or
+   [betula](https://github.com/lentago/betula) (log capture) — and read its
+   **🛠️ Make a change yourself** section. Follow one proof-PR link and read
+   the actual merged change (the *diff* — the before-and-after of the files).
+4. **Ask DeepWiki something.** DeepWiki is an AI-generated wiki over each repo;
+   every README carries starter questions and a big badge that opens it. Ask
+   one, then spot-check a single claim in the answer against the source. AI
+   answers are a fast way in, not a source of truth — figuring out how far to
+   trust them is half the point.
 5. **Read this week's [fleet report](https://github.com/lentago/.github/blob/main/fleet-reports/fleet-report.md)
    and one entry from the [incident register](https://github.com/lentago/.github/blob/main/fleet-reports/incidents.md).**
-   The post-mortems are the best reading in the fleet — what broke, what did
-   *not*, and the governance lesson.
+   The post-mortems — plain write-ups of what broke and why — are the best
+   reading in the fleet: what broke, what did *not*, and the lesson that came
+   out of it.
 6. **Run [Lab 01](../labs/01-first-pr-roster.md)** — add yourself to the
-   [roster](roster.md) by pull request. You'll feel the whole change gate:
-   branch → PR → required checks → review → squash merge.
+   [guestbook](roster.md) by pull request (a proposed change someone reviews
+   before it lands). You'll feel the whole change gate end to end: branch → PR
+   → automatic checks → a human review → merge.
 7. **Say `@claude` somewhere.** On any issue or PR in the fleet, mention
    `@claude` with a question or a request — the agent responder answers from
-   the repo's context. That's the agentic on-ramp; [Lab 03](../labs/03-review-an-agent.md)
-   builds on it.
+   that repo's context. That's the same agent layer the fleet runs on;
+   [Lab 03](../labs/03-review-an-agent.md) builds on it.
 
 Then keep climbing: the [lab ladder](../labs/README.md) runs from asking
 questions (L0) to changing real systems (L2) to reviewing an agent's work (L3).
 
-**Something confusing on day one?** That's a finding, not a failure — open an
-issue here. Confusion reports are how the manual gets better.
+**How you know you're done:** you've asked the wiki at least one real question
+and checked its answer, and your name is sitting in the [guestbook](roster.md)
+on `main` — your first change all the way through the gate.
+
+**Something confusing on day one?** That's worth writing down, not something
+you got wrong — open an issue here. Confusion reports are how these pages get
+better.

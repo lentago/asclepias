@@ -1,6 +1,7 @@
 # Estate atlas
 
-What the lab runs, at the same detail level the public repos already publish.
+What we run, at the same detail level the public repos already publish. If
+you're sizing up whether any of this fits your own org, this is the map.
 (Deeper operational specifics live in each owning repo and in the
 [incident register](https://github.com/lentago/.github/blob/main/fleet-reports/incidents.md),
 which deliberately publishes post-mortems verbatim.)
@@ -29,7 +30,7 @@ a pull request, merges apply automatically, humans own every merge.
 | [claytonia](https://github.com/lentago/claytonia) | The agent-runner pool itself, plus worker tooling via a 5-minute GitOps pull |
 | [drosera](https://github.com/lentago/drosera) | Grafana Cloud dashboards, alert rules, and the central Alloy config |
 | [betula](https://github.com/lentago/betula) | Log collectors (Firewalla/Zeek → Loki; AWS → Axiom) |
-| [homeassistant-config](https://github.com/lentago/homeassistant-config) | The running smart home (5-minute GitOps poller, validate-then-reload with auto-rollback) |
+| [epigaea](https://github.com/lentago/epigaea) | The running smart home (5-minute GitOps poller, validate-then-reload with auto-rollback) |
 | site repos ([lentago.dev](https://github.com/lentago/site-lentago-dev), [icecreamtofightwith.com](https://github.com/lentago/site-icecreamtofightwith-com), [pondviewlane.com](https://github.com/lentago/site-pondviewlane-com)) | The live sites (build + deploy onto solidago's platform) |
 | [.github](https://github.com/lentago/.github) | Org and repo settings — rulesets, required checks, labels, repo existence — via fleet settings-as-code |
 

@@ -1,13 +1,13 @@
 name: Lab run
-description: Start a lab from the ladder — gives your run a durable record and a place for questions.
+description: Start a lab from the ladder — this gives your run a home for notes, questions, and proof.
 title: "Lab NN: <lab name> — <your handle>"
 body:
   - type: markdown
     attributes:
       value: |
         Pick your rung from the [lab ladder](https://github.com/lentago/asclepias/blob/main/labs/README.md),
-        set the title (e.g. `Lab 01: First PR — @octocat`), and go. Post questions here as you work —
-        stuck ≠ failed, and confusion reports improve the manual.
+        set the title (e.g. `Lab 01: First PR — @octocat`), and go. Ask anything here as you work —
+        being stuck isn't failing, and the questions you hit are how these pages get clearer.
   - type: dropdown
     id: lab
     attributes:
@@ -24,7 +24,7 @@ body:
     id: plan
     attributes:
       label: Your plan (optional)
-      description: For labs with choices (which repo to ask, which dashboard to touch) — say what you're aiming at.
+      description: If your lab has choices to make (which repo to ask, which dashboard to touch), say what you're aiming at.
   - type: checkboxes
     id: prereqs
     attributes:
