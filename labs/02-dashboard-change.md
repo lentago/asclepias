@@ -1,10 +1,21 @@
 # Lab 02 — Move a real dashboard
 
 **Level:** L2 · real system
-**Goal:** watch your merged PR change a live system with no human hands on the
-apply — the heart of apply-on-merge.
-**Access needed:** a fork PR is enough to propose; a maintainer merges. The
-apply is CI's job, not yours.
+
+**What you're about to do:** propose a small change to a live Grafana dashboard
+and, once it's merged, watch automation push it to production — no one logging
+in and editing by hand.
+
+**Why bother:** this is *apply-on-merge* — the merge itself is what changes the
+live system, so the change that ran and the change in git are always the same
+thing. It's the pattern that ends "someone tweaked it in the console and forgot
+to write it down." Seeing it once makes the case for building it at home.
+
+**Time:** about thirty minutes of work, plus however long until a maintainer
+merges.
+
+**You'll need:** a free GitHub account and a fork — that's enough to propose.
+A maintainer merges; the apply is CI's job, not yours.
 
 ## Steps
 
@@ -31,6 +42,12 @@ apply is CI's job, not yours.
 The merged PR link + the apply workflow-run link (and the before/after of your
 panel, if you can capture it).
 
-**What just happened:** you proposed a production change you couldn't apply
-yourself; it was reviewed as a diff, applied by automation, and git stayed the
-single source of truth.
+**How you know it worked:** your panel looks different in live Grafana, and the
+only thing you did to make that happen was merge a pull request. The apply job
+in the Actions tab is the receipt — no console edits, no hands on production.
+
+**In your own org this looks like:** the things people usually change by
+clicking around — a dashboard, a DNS record, a firewall rule — become files in
+git that a merge applies for you. You review the change before it ships, and
+git is always the truth about what's running, because nothing reaches
+production any other way.
