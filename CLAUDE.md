@@ -51,8 +51,8 @@ live.
   the owning repo. If a pattern can't be evidenced, it doesn't go in the
   catalog. Harvest from the fleet's README `🧭 What this repo demonstrates`
   sections; don't invent.
-- **Pages are self-contained with stable headings.** Agent and assistant
-  readers consume pages in isolation — no page may depend on reading another
+- **Pages are self-contained with stable headings.** Agent readers and
+  grounded Ask boxes consume pages in isolation — no page may depend on reading another
   first, and renaming a heading is a breaking change for inbound links.
 - **Labs follow a fixed shape:** Goal · Access needed · Steps · Proof. State
   access honestly (fork-first vs. maintainer-merge); a lab that overstates a
