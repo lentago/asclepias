@@ -20,7 +20,7 @@ list for your own org.
 | Service catalog | Platform modules a workload composes (VPC, ECS, ALB, DNS, budgets) — ship a workload by wiring modules, not by filing a ticket | [solidago modules/](https://github.com/lentago/solidago/tree/main/modules) |
 | Segregation of duties | The agent that writes code cannot merge it; the pipeline that deploys workloads cannot touch infrastructure | [claytonia](https://github.com/lentago/claytonia) merge gate; solidago trust split |
 | Cost management | Budgets-as-code with staged alerts; teardown patterns for idle capacity | [solidago budgets](https://github.com/lentago/solidago/tree/main/modules/budgets) |
-| Knowledge base | Plain-Markdown manual + AI-generated wiki over every repo — ask first, spelunk second | This manual + [DeepWiki](https://deepwiki.com/lentago) |
+| Knowledge base | Plain-Markdown manual written to be read directly, plus a grounded assistant that checks live state before answering from the docs in git | This manual + [mitchella](https://github.com/lentago/mitchella) |
 
 **A mapping feels wrong or incomplete?** Perfect — that disagreement is
 exactly what the glossary is for. Open a PR with your version and let review

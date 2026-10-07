@@ -13,7 +13,6 @@ body:
     attributes:
       label: Which lab?
       options:
-        - "00 — Ask the fleet (L0)"
         - "01 — First PR: the roster (L1)"
         - "02 — Move a real dashboard (L2)"
         - "03 — Review an agent (L3)"
@@ -24,7 +23,7 @@ body:
     id: plan
     attributes:
       label: Your plan (optional)
-      description: If your lab has choices to make (which repo to ask, which dashboard to touch), say what you're aiming at.
+      description: If your lab has choices to make (which dashboard to touch, which agent PR to review), say what you're aiming at.
   - type: checkboxes
     id: prereqs
     attributes:
