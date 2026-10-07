@@ -1,8 +1,8 @@
 # Day one
 
 **What you're about to do:** take one guided lap around a real, working
-estate — the org's front door, one product repo, the AI-generated wiki, this
-week's public report — and then make your own first change to it.
+estate — the org's front door, one product repo, this week's public report —
+and then make your own first change to it.
 
 **Why bother:** this fleet runs the way you'll probably want your own org to
 run one day — every change reviewed, every change recorded, nothing edited live
@@ -30,30 +30,24 @@ cloud credentials.
    [betula](https://github.com/lentago/betula) (log capture) — and read its
    **🛠️ Make a change yourself** section. Follow one proof-PR link and read
    the actual merged change (the *diff* — the before-and-after of the files).
-4. **Ask DeepWiki something.** DeepWiki is an AI-generated wiki over each repo;
-   every README carries starter questions and a big badge that opens it. Ask
-   one, then spot-check a single claim in the answer against the source. AI
-   answers are a fast way in, not a source of truth — figuring out how far to
-   trust them is half the point.
-5. **Read this week's [fleet report](https://github.com/lentago/.github/blob/main/fleet-reports/fleet-report.md)
+4. **Read this week's [fleet report](https://github.com/lentago/.github/blob/main/fleet-reports/fleet-report.md)
    and one entry from the [incident register](https://github.com/lentago/.github/blob/main/fleet-reports/incidents.md).**
    The post-mortems — plain write-ups of what broke and why — are the best
    reading in the fleet: what broke, what did *not*, and the lesson that came
    out of it.
-6. **Run [Lab 01](../labs/01-first-pr-roster.md)** — add yourself to the
+5. **Run [Lab 01](../labs/01-first-pr-roster.md)** — add yourself to the
    [guestbook](roster.md) by pull request (a proposed change someone reviews
    before it lands). You'll feel the whole change gate end to end: branch → PR
    → automatic checks → a human review → merge.
-7. **Say `@claude` somewhere.** On any issue or PR in the fleet, mention
+6. **Say `@claude` somewhere.** On any issue or PR in the fleet, mention
    `@claude` with a question or a request — the agent responder answers from
    that repo's context. That's the same agent layer the fleet runs on;
    [Lab 03](../labs/03-review-an-agent.md) builds on it.
 
-Then keep climbing: the [lab ladder](../labs/README.md) runs from asking
-questions (L0) to changing real systems (L2) to reviewing an agent's work (L3).
+Then keep climbing: the [lab ladder](../labs/README.md) runs from your first
+change (L1) to changing real systems (L2) to reviewing an agent's work (L3).
 
-**How you know you're done:** you've asked the wiki at least one real question
-and checked its answer, and your name is sitting in the [guestbook](roster.md)
+**How you know you're done:** your name is sitting in the [guestbook](roster.md)
 on `main` — your first change all the way through the gate.
 
 **Something confusing on day one?** That's worth writing down, not something

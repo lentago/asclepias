@@ -7,7 +7,6 @@ there's a durable record and a place for questions.
 
 | Lab | Level | Access needed | What you'll walk away with |
 |---|---|---|---|
-| [00 — Ask the fleet](00-ask-the-fleet.md) | L0 · observe | A browser | Asked AI-generated docs a real question — and checked the answer against source |
 | [01 — First PR: the roster](01-first-pr-roster.md) | L1 · first change | A free GitHub account + a fork | Been through the whole change gate: branch → PR → checks → review → squash merge |
 | [02 — Move a real dashboard](02-dashboard-change.md) | L2 · real system | A free GitHub account + a fork; a maintainer merges | Merged a change that automation, not hands, applied to a live system |
 | [03 — Review an agent](03-review-an-agent.md) | L3 · agentic | A free GitHub account; anyone can comment, a fork PR works | Reviewed AI-produced work as carefully as you'd review a person's |

@@ -2,7 +2,7 @@
      Regenerate there; do not hand-edit the banner or badge URLs. -->
 <a href="https://lentago.dev"><img src="./assets/banner.svg" alt="asclepias — Field guide · manual, labs, onboarding" width="100%"></a>
 
-[![main](https://img.shields.io/github/check-runs/lentago/asclepias/main?style=flat-square&labelColor=0e2b1a&color=1b4b2e&label=main)](https://github.com/lentago/asclepias/actions) [![License](https://img.shields.io/github/license/lentago/asclepias?style=flat-square&labelColor=0e2b1a&color=1b4b2e)](https://github.com/lentago/asclepias/blob/main/LICENSE) [![Ask DeepWiki](https://img.shields.io/badge/Ask-DeepWiki-1b4b2e?style=flat-square&labelColor=0e2b1a&logo=readthedocs&logoColor=E0A81C)](https://deepwiki.com/lentago/asclepias)
+[![main](https://img.shields.io/github/check-runs/lentago/asclepias/main?style=flat-square&labelColor=0e2b1a&color=1b4b2e&label=main)](https://github.com/lentago/asclepias/actions) [![License](https://img.shields.io/github/license/lentago/asclepias?style=flat-square&labelColor=0e2b1a&color=1b4b2e)](https://github.com/lentago/asclepias/blob/main/LICENSE)
 
 ![Markdown](https://img.shields.io/badge/Markdown-1b4b2e?style=flat-square&labelColor=0e2b1a&logo=markdown&logoColor=E0A81C) ![Docs-as-code](https://img.shields.io/badge/Docs--as--code-1b4b2e?style=flat-square&labelColor=0e2b1a) ![Labs](https://img.shields.io/badge/Labs-1b4b2e?style=flat-square&labelColor=0e2b1a)
 
@@ -24,25 +24,6 @@ with [Claude](https://claude.ai) (Anthropic). I direct the work and review the
 output; Claude writes the prose. I'm an infrastructure operator, not a software
 engineer — please don't read this repo as a portfolio of coding ability.
 
-## 📚 Ask this codebase (DeepWiki)
-
-<a href="https://deepwiki.com/lentago/asclepias"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki" height="32"></a>
-
-> [DeepWiki](https://deepwiki.com/lentago/asclepias) maintains an AI-generated
-> wiki over this repository — pages, structure, and a Q&A box grounded in the
-> actual content. Every public Lentago Labs repo is indexed
-> ([deepwiki.com/lentago](https://deepwiki.com/lentago)); because the manual is
-> plain Markdown with stable headings, the whole manual is ask-able. It is
-> AI-generated: trust it to orient you, verify against the source before you
-> act on it.
-
-**Good first questions:**
-
-- What order do the labs run in, and what's each one about?
-- Where in the fleet is apply-on-merge actually enforced, according to the
-  pattern catalog?
-- What does the glossary say "change management" maps to here?
-
 ## 🧭 What this repo demonstrates
 
 This repo runs on the same patterns it catalogs — starting with how it was born.
@@ -53,7 +34,7 @@ This repo runs on the same patterns it catalogs — starting with how it was bor
 | **Docs-as-code** — the manual is versioned, reviewed, link-checked | Every page is plain Markdown under [`manual/`](manual/); [`docs-check`](.github/workflows/docs-check.yml) (a thin wrapper over the shared reusable workflow) gates every PR, so a broken link can't merge. |
 | **Lab runs as issues** — every lab run is a tracked artifact | Labs live in [`labs/`](labs/) with an [issue template](.github/ISSUE_TEMPLATE/lab-run.yml); opening a lab issue gives each run a durable record, review thread, and finish line. |
 | **Claims carry evidence** — no pattern without a link to where it's live | The [pattern catalog](manual/pattern-catalog.md) cites the owning repo and file/PR for every row — the same evidence discipline every fleet README follows. |
-| **LLM-consumable by design** — one manual, many readers | Pages are self-contained with stable headings, so DeepWiki, an agent with a checkout, or anyone with a browser all get the same answers. |
+| **LLM-consumable by design** — one manual, many readers | Pages are self-contained with stable headings, so an agent with a checkout, a grounded assistant like [mitchella](https://github.com/lentago/mitchella), or anyone with a browser all get the same answers. |
 
 ## 🛠️ Make a change yourself
 
@@ -90,7 +71,7 @@ offline. Nothing to build, nothing to install.
 |---|---|
 | [`onboarding/`](onboarding/) | The day-one path and the guestbook |
 | [`manual/`](manual/) | The operations manual: estate atlas, pattern catalog, glossary, runbook index |
-| [`labs/`](labs/) | Numbered hands-on labs, L0 → L4 |
+| [`labs/`](labs/) | Numbered hands-on labs, L1 → L4 |
 | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | The lab-run issue form |
 | [`docs/adr/`](docs/adr/) | Architecture decisions — why this repo is shaped the way it is |
 
@@ -99,5 +80,4 @@ offline. Nothing to build, nothing to install.
 > 🌱 **Lentago Labs** is a pro-bono operations practice for organizations that
 > run on volunteers, donations, and one overworked tech person. Everything here
 > is free to take, and we practice what we publish: our own estate runs this
-> way, in the open. Start at the [org profile](https://github.com/lentago), and
-> read this repo on [DeepWiki](https://deepwiki.com/lentago/asclepias).
+> way, in the open. Start at the [org profile](https://github.com/lentago).
