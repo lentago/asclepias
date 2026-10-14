@@ -9,8 +9,9 @@ which deliberately publishes post-mortems verbatim.)
 ## Two estates, one operating model
 
 **On-prem** — the machines in our own building: a multi-node Proxmox VE cluster
-with a NAS, running (among other guests) a production Home Assistant OS VM, an
-observability shipper LXC, a small always-on web server, a LAN GitHub Actions
+with a NAS (network-attached storage), running (among other guests) a production
+Home Assistant OS VM (virtual machine), an observability shipper LXC (a
+lightweight Linux container), a small always-on web server, a LAN GitHub Actions
 runner, and the five-worker Claude agent fleet ("the bullpen"). Every VM and LXC on the cluster is declared
 in Terraform and applied on merge.
 
