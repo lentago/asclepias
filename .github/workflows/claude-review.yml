@@ -1,0 +1,113 @@
+# ============================================================================
+# Claude Code — Automated PR Review (advisory)
+# ============================================================================
+# Thin wrapper around lentago/shared-workflows/claude-review.yml, per
+# lentago/.github ADR-0013. This file is copied from repo-template's: other repos
+# copy it and replace only the review_prompt.
+#
+# - Runs when a PR is opened or marked ready for review, and again when it is
+#   labelled `re-review` (Haiku) or `review:sonnet` (Sonnet). It does NOT run on
+#   every push: it shares the fleet's Claude subscription with the bullpen.
+# - Advisory, never a required status check (shared-workflows ADR-0003). The
+#   gate is the arming rule: don't arm until a review has posted and every
+#   finding is triaged on the PR (shared-workflows CLAUDE.md, Auto-merge
+#   arming). A "could not complete" soft-fail comment is not a review —
+#   label `re-review`.
+# - After a labelled run, `clear-label` removes the label so adding it again
+#   triggers again.
+# - A PR that adds or changes THIS file is not reviewed by it: the Claude Code
+#   action skips unless the workflow is identical to the default branch's copy,
+#   and the reusable workflow (v1.5.0+) posts a "not a review" notice instead.
+#   Review such PRs locally and post the result as "Review (Haiku, local)"
+#   (ADR-0013 Decision 2).
+# - Dependabot PRs are skipped: Dependabot runs don't receive Actions secrets,
+#   so the required token would fail the call. Review a bump locally if it
+#   warrants one.
+# - Drafts are skipped (by the reusable workflow) and keep their trigger label
+#   until they are ready.
+# ============================================================================
+
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, labeled]
+
+jobs:
+  review:
+    if: >-
+      github.actor != 'dependabot[bot]' &&
+      github.event.pull_request.draft == false &&
+      (github.event.action != 'labeled' ||
+       github.event.label.name == 're-review' ||
+       github.event.label.name == 'review:sonnet')
+    # One review at a time per PR: a re-label during a running review queues
+    # behind it instead of posting a duplicate.
+    concurrency:
+      group: claude-review-${{ github.event.pull_request.number }}
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+    uses: lentago/shared-workflows/.github/workflows/claude-review.yml@v1.5.0
+    secrets: inherit
+    with:
+      model: ${{ github.event.label.name == 'review:sonnet' && 'sonnet' || 'haiku' }}
+      review_prompt: |
+        This repository is lentago/asclepias, vol. 1 of the Lentago Labs guide:
+        plain Markdown (no build step) holding the operations manual, a
+        day-one onboarding path, and numbered labs, written for the one tech
+        person who runs a nonprofit's computers. The deliverable is accuracy
+        the reader can rely on. Focus your review on:
+
+        - **Evidence for fleet claims**: every claim about the fleet must link
+          to where it is live (a repo, file path, or PR in the owning repo).
+          Flag a pattern or atlas row with no link, a link that doesn't
+          support the claim, or a stale name (e.g. `homeassistant-config` is
+          now `epigaea`).
+        - **Public-detail line**: the estate atlas and runbooks stay at
+          public-repo detail. Flag credentials, private IP maps with purposes,
+          or access patterns anywhere in the repo.
+        - **Honest access in labs**: labs follow Goal, Access needed, Steps,
+          Proof. Nobody holds org-wide write (org base permission is `none`);
+          the path is a free GitHub account, a fork, and a maintainer merge.
+          Flag any lab that overstates permissions or promises secret-dependent
+          workflows on fork PRs.
+        - **Voice and self-containment**: prose follows lentago/.github
+          `docs/voice.md` for one reader: second person, present tense, terms
+          defined on first use, the trap named before the step, costs and
+          times stated plainly. Each page must stand alone, and renaming a
+          heading breaks inbound links, so flag it.
+        - **Links and structure**: relative links must resolve (the required
+          `docs-check` enforces this). `onboarding/roster.md` is append-only
+          by visitors, one row each, so flag reorganizing or removing rows.
+          ADRs are never edited in place; changes go in a dated
+          `## Amendment` section.
+        - **Scope**: this repo shows the fleet and doesn't govern it. Flag
+          restated policy that belongs in lentago/.github or
+          shared-workflows instead of a link.
+
+  clear-label:
+    needs: review
+    if: >-
+      always() && github.event.action == 'labeled' &&
+      github.event.pull_request.draft == false &&
+      (github.event.label.name == 're-review' || github.event.label.name == 'review:sonnet')
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Remove the trigger label so it can be added again
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          LABEL: ${{ github.event.label.name }}
+        # REST, not `gh pr edit`: the GraphQL path can trip on PR project
+        # fields with GITHUB_TOKEN, and a label left behind would make the
+        # next re-add a no-op (no `labeled` event).
+        run: |
+          enc=$(jq -rn --arg l "$LABEL" '$l|@uri')
+          gh api --method DELETE "repos/$REPO/issues/$PR/labels/$enc" >/dev/null
