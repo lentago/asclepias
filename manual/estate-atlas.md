@@ -20,7 +20,7 @@ an ALB, RDS Postgres, ElastiCache, WAF, KMS, budgets), 100% Terraform, serving
 four live public sites and a serverless Ask endpoint.
 
 The operating model is identical on both: everything is code, every change is
-a pull request, merges apply automatically, humans own every merge.
+a pull request, merges apply automatically. Humans own the policy and direct every change. Every directed pull request gets an AI review. Opted-in scheduled routines merge on their deterministic gate alone ([ADR-0014](https://github.com/lentago/.github/blob/main/docs/adr/0014-merge-promise-humans-own-the-policy.md)).
 
 ## Which repo moves which surface
 
